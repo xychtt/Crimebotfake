@@ -55,3 +55,27 @@ setInterval(()=>{
   document.querySelector(".details p:nth-child(1)").textContent =
     "Ping: " + ping + "ms";
 },2000);
+
+const card = document.querySelector(".card");
+
+document.addEventListener("mousemove", (e) => {
+  const rect = card.getBoundingClientRect();
+
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+
+  const rotateX = -(y - centerY) / 20;
+  const rotateY = (x - centerX) / 20;
+
+  card.style.transform = `
+    rotateX(${rotateX}deg)
+    rotateY(${rotateY}deg)
+  `;
+
+  // update refraction light
+  card.style.setProperty("--x", `${x}px`);
+  card.style.setProperty("--y", `${y}px`);
+});
