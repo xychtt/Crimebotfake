@@ -87,13 +87,20 @@ body {
 
 .status-dot {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
-  width: 14px;
-  height: 14px;
+  bottom: 6px;
+  right: 6px;
+
+  width: 16px;
+  height: 16px;
+
   background: #23a559;
-  border: 3px solid #000;
   border-radius: 50%;
+
+  border: 3px solid rgba(0,0,0,0.9);
+
+  box-shadow:
+    0 0 10px rgba(35,165,89,0.9),
+    0 0 20px rgba(35,165,89,0.4);
 }
 
 .status-dot::after {
