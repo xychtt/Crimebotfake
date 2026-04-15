@@ -21,7 +21,21 @@ body {
   overflow: hidden;
   padding: 50px 60px;
   border-radius: 28px;
-  width: 320px;
+  width: 340px;
+
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.7),
+    inset 0 1px 0 rgba(255,255,255,0.15),
+    inset 0 -1px 0 rgba(255,255,255,0.05);
+
+  transform-style: preserve-3d;
+}
 
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(20px) saturate(140%);
