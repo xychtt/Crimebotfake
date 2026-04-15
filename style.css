@@ -158,12 +158,17 @@ h1 {
 
 .mouse-glow {
   position: fixed;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   pointer-events: none;
-  background: radial-gradient(circle, rgba(255,255,255,0.06), transparent 60%);
-  filter: blur(60px);
+
+  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+  filter: blur(80px);
+
   transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+
+  z-index: 0;
 }
 
 .music-control {
